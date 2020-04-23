@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Meme View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MemeViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ca-wi-ATc">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem image="photo" catalog="system" id="s0B-wa-s86">
                                         <connections>
@@ -31,48 +30,54 @@
                                 </items>
                             </toolbar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WBq-sw-BNm">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Top" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1o9-66-Qhp">
-                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1o9-66-Qhp">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="wor-fL-9yx"/>
                                 </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Bottom" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JS3-iG-OwB">
-                                <rect key="frame" x="0.0" y="763" width="414" height="50"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JS3-iG-OwB">
+                                <rect key="frame" x="0.0" y="506" width="600" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9y7-EU-4WS"/>
                                 </constraints>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="4ca-wi-ATc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5Ld-Dp-2sZ"/>
                             <constraint firstItem="WBq-sw-BNm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6sw-qW-J3B"/>
-                            <constraint firstItem="4ca-wi-ATc" firstAttribute="top" secondItem="JS3-iG-OwB" secondAttribute="bottom" id="BJL-Za-mr7"/>
                             <constraint firstItem="4ca-wi-ATc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bl7-4t-kEp"/>
                             <constraint firstItem="WBq-sw-BNm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JTm-CS-gYf"/>
                             <constraint firstItem="4ca-wi-ATc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Lna-uH-BF5"/>
+                            <constraint firstItem="4ca-wi-ATc" firstAttribute="top" secondItem="WBq-sw-BNm" secondAttribute="bottom" id="PAz-EQ-FQd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WBq-sw-BNm" secondAttribute="trailing" id="a3h-9E-wPy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1o9-66-Qhp" secondAttribute="trailing" id="cq3-1r-HLY"/>
                             <constraint firstItem="WBq-sw-BNm" firstAttribute="bottom" secondItem="4ca-wi-ATc" secondAttribute="top" id="dqh-cT-vWT"/>
                             <constraint firstItem="JS3-iG-OwB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fsf-WJ-uJ6"/>
-                            <constraint firstItem="1o9-66-Qhp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="g7K-Lx-mmp"/>
                             <constraint firstItem="1o9-66-Qhp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gqN-PT-7ke"/>
+                            <constraint firstItem="1o9-66-Qhp" firstAttribute="top" secondItem="WBq-sw-BNm" secondAttribute="top" id="j3q-uE-DOy"/>
+                            <constraint firstItem="1o9-66-Qhp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="st9-Ts-Uan"/>
+                            <constraint firstItem="JS3-iG-OwB" firstAttribute="bottom" secondItem="WBq-sw-BNm" secondAttribute="bottom" id="tr6-Js-XzO"/>
                             <constraint firstItem="JS3-iG-OwB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w7C-1i-e5Q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bottomTextField" destination="JS3-iG-OwB" id="VNI-Ke-Wh6"/>
                         <outlet property="cameraButton" destination="SsT-rF-kFv" id="3Sf-Zx-Kg6"/>
                         <outlet property="imageView" destination="WBq-sw-BNm" id="0Jw-pj-YQr"/>
+                        <outlet property="topTextField" destination="1o9-66-Qhp" id="u6J-k1-7e7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

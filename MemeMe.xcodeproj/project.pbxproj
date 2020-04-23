@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		0113FB33244F2A4B00B85915 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0113FB32244F2A4B00B85915 /* AppDelegate.swift */; };
 		0113FB35244F2A4B00B85915 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0113FB34244F2A4B00B85915 /* SceneDelegate.swift */; };
-		0113FB37244F2A4B00B85915 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0113FB36244F2A4B00B85915 /* ViewController.swift */; };
+		0113FB37244F2A4B00B85915 /* MemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0113FB36244F2A4B00B85915 /* MemeViewController.swift */; };
 		0113FB3A244F2A4B00B85915 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0113FB38244F2A4B00B85915 /* Main.storyboard */; };
 		0113FB3C244F2A4D00B85915 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0113FB3B244F2A4D00B85915 /* Assets.xcassets */; };
 		0113FB3F244F2A4D00B85915 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0113FB3D244F2A4D00B85915 /* LaunchScreen.storyboard */; };
+		01F6E45C2451676200FC5FBA /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F6E45B2451676200FC5FBA /* Meme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0113FB2F244F2A4B00B85915 /* MemeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MemeMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0113FB32244F2A4B00B85915 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0113FB34244F2A4B00B85915 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0113FB36244F2A4B00B85915 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0113FB36244F2A4B00B85915 /* MemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeViewController.swift; sourceTree = "<group>"; };
 		0113FB39244F2A4B00B85915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0113FB3B244F2A4D00B85915 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0113FB3E244F2A4D00B85915 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0113FB40244F2A4D00B85915 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01F6E45B2451676200FC5FBA /* Meme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,11 +60,12 @@
 			children = (
 				0113FB32244F2A4B00B85915 /* AppDelegate.swift */,
 				0113FB34244F2A4B00B85915 /* SceneDelegate.swift */,
-				0113FB36244F2A4B00B85915 /* ViewController.swift */,
+				0113FB36244F2A4B00B85915 /* MemeViewController.swift */,
 				0113FB38244F2A4B00B85915 /* Main.storyboard */,
 				0113FB3B244F2A4D00B85915 /* Assets.xcassets */,
 				0113FB3D244F2A4D00B85915 /* LaunchScreen.storyboard */,
 				0113FB40244F2A4D00B85915 /* Info.plist */,
+				01F6E45B2451676200FC5FBA /* Meme.swift */,
 			);
 			path = MemeMe;
 			sourceTree = "<group>";
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0113FB37244F2A4B00B85915 /* ViewController.swift in Sources */,
+				0113FB37244F2A4B00B85915 /* MemeViewController.swift in Sources */,
+				01F6E45C2451676200FC5FBA /* Meme.swift in Sources */,
 				0113FB33244F2A4B00B85915 /* AppDelegate.swift in Sources */,
 				0113FB35244F2A4B00B85915 /* SceneDelegate.swift in Sources */,
 			);
