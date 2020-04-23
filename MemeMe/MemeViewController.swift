@@ -111,7 +111,6 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 	}
 	
 	@IBAction func previousMeme(_ sender: UIBarButtonItem) {
-		print(memeIndex)
 		if memeIndex == 0 {
 			previousMemeButton.isEnabled = false
 			imageView.image = memes[memeIndex].memedImage
