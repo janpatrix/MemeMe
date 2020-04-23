@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -11,30 +12,49 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MemeViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ca-wi-ATc">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
-                                    <barButtonItem image="photo" catalog="system" id="s0B-wa-s86">
+                                    <barButtonItem title="Select Image" image="photo" catalog="system" id="s0B-wa-s86">
                                         <connections>
                                             <action selector="pickPicture:" destination="BYZ-38-t0r" id="D4b-gp-0Im"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem image="camera" catalog="system" id="SsT-rF-kFv">
+                                    <barButtonItem title="Take Photo" image="camera" catalog="system" id="SsT-rF-kFv">
                                         <connections>
                                             <action selector="takePhoto:" destination="BYZ-38-t0r" id="kC2-lJ-Z8n"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Save" image="tray.and.arrow.down.fill" catalog="system" id="D6I-tJ-Mjk">
+                                        <connections>
+                                            <action selector="saveMeme:" destination="BYZ-38-t0r" id="awR-sc-kdK"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem title="Edit" image="square.and.pencil" catalog="system" id="75z-qS-WjT">
+                                        <connections>
+                                            <action selector="editMeme:" destination="BYZ-38-t0r" id="PaF-z8-apn"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem enabled="NO" title="Previous" image="arrowshape.turn.up.left.fill" catalog="system" id="gzz-II-BsS">
+                                        <connections>
+                                            <action selector="previousMeme:" destination="BYZ-38-t0r" id="kES-8h-81N"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem enabled="NO" title="Next" image="arrowshape.turn.up.right.fill" catalog="system" id="qYc-t1-ar0">
+                                        <connections>
+                                            <action selector="nextMeme:" destination="BYZ-38-t0r" id="6oM-0F-yIg"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
                             </toolbar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WBq-sw-BNm">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1o9-66-Qhp">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="50"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="wor-fL-9yx"/>
                                 </constraints>
@@ -43,7 +63,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JS3-iG-OwB">
-                                <rect key="frame" x="0.0" y="506" width="600" height="50"/>
+                                <rect key="frame" x="0.0" y="663" width="414" height="50"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="9y7-EU-4WS"/>
@@ -66,17 +86,23 @@
                             <constraint firstItem="WBq-sw-BNm" firstAttribute="bottom" secondItem="4ca-wi-ATc" secondAttribute="top" id="dqh-cT-vWT"/>
                             <constraint firstItem="JS3-iG-OwB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fsf-WJ-uJ6"/>
                             <constraint firstItem="1o9-66-Qhp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gqN-PT-7ke"/>
-                            <constraint firstItem="1o9-66-Qhp" firstAttribute="top" secondItem="WBq-sw-BNm" secondAttribute="top" id="j3q-uE-DOy"/>
+                            <constraint firstItem="1o9-66-Qhp" firstAttribute="top" secondItem="WBq-sw-BNm" secondAttribute="top" constant="100" id="j3q-uE-DOy"/>
                             <constraint firstItem="1o9-66-Qhp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="st9-Ts-Uan"/>
-                            <constraint firstItem="JS3-iG-OwB" firstAttribute="bottom" secondItem="WBq-sw-BNm" secondAttribute="bottom" id="tr6-Js-XzO"/>
+                            <constraint firstItem="JS3-iG-OwB" firstAttribute="bottom" secondItem="WBq-sw-BNm" secondAttribute="bottom" constant="-100" id="tr6-Js-XzO"/>
                             <constraint firstItem="JS3-iG-OwB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w7C-1i-e5Q"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="bottomTextField" destination="JS3-iG-OwB" id="VNI-Ke-Wh6"/>
-                        <outlet property="cameraButton" destination="SsT-rF-kFv" id="3Sf-Zx-Kg6"/>
                         <outlet property="imageView" destination="WBq-sw-BNm" id="0Jw-pj-YQr"/>
+                        <outlet property="nextMemeButton" destination="qYc-t1-ar0" id="obY-BW-xu4"/>
+                        <outlet property="previousMemeButton" destination="gzz-II-BsS" id="j6q-qU-eHr"/>
+                        <outlet property="toolbar" destination="4ca-wi-ATc" id="Xtv-3C-6hL"/>
+                        <outlet property="toolbarEdit" destination="75z-qS-WjT" id="dbh-Ap-bQH"/>
+                        <outlet property="toolbarImage" destination="s0B-wa-s86" id="i8k-wc-eun"/>
+                        <outlet property="toolbarPhoto" destination="SsT-rF-kFv" id="feN-Fd-zFt"/>
+                        <outlet property="toolbarSave" destination="D6I-tJ-Mjk" id="cxU-Xe-CxC"/>
                         <outlet property="topTextField" destination="1o9-66-Qhp" id="u6J-k1-7e7"/>
                     </connections>
                 </viewController>
@@ -86,7 +112,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
+        <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <image name="camera" catalog="system" width="128" height="96"/>
         <image name="photo" catalog="system" width="128" height="93"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="118"/>
+        <image name="tray.and.arrow.down.fill" catalog="system" width="128" height="114"/>
     </resources>
 </document>
