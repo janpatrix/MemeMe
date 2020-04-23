@@ -20,6 +20,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 	@IBOutlet weak var toolbarEdit: UIBarButtonItem!
 	@IBOutlet weak var nextMemeButton: UIBarButtonItem!
 	@IBOutlet weak var previousMemeButton: UIBarButtonItem!
+	@IBOutlet weak var toolbarShare: UIBarButtonItem!
 	
 	let imagePicker = UIImagePickerController()
 	var memes: [Meme] = []
@@ -97,6 +98,7 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 			previousMemeButton.isEnabled = true
 		}
 		changeUIControls(topTextEnabled: true, bottomTextEnabled: true, toolbarPhotoEnabled: false, toolbarSaveEnabled: false, toolbarImageEnabled: false, toolbarEditEnabled: true)
+		toolbarShare.isEnabled = true
 	}
 	
 	@IBAction func editMeme(_ sender: UIBarButtonItem) {
@@ -109,6 +111,11 @@ class MemeViewController: UIViewController, UIImagePickerControllerDelegate, UIN
 		changeUIControls(topTextEnabled: false, bottomTextEnabled: false, toolbarPhotoEnabled: true, toolbarSaveEnabled: true, toolbarImageEnabled: true, toolbarEditEnabled: false)
 
 	}
+	
+	@IBAction func shareMeme(_ sender: Any) {
+		
+	}
+	
 	
 	@IBAction func previousMeme(_ sender: UIBarButtonItem) {
 		if memeIndex == 0 {

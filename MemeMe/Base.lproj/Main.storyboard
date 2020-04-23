@@ -15,7 +15,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ca-wi-ATc">
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nDA-as-WoT" userLabel="topToolbar">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem enabled="NO" title="Previous" image="arrowshape.turn.up.left.fill" catalog="system" width="217" id="gzz-II-BsS">
+                                        <connections>
+                                            <action selector="previousMeme:" destination="BYZ-38-t0r" id="kES-8h-81N"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem enabled="NO" title="Next" image="arrowshape.turn.up.right.fill" catalog="system" width="315" id="qYc-t1-ar0">
+                                        <connections>
+                                            <action selector="nextMeme:" destination="BYZ-38-t0r" id="6oM-0F-yIg"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem enabled="NO" title="Share" image="paperplane.fill" catalog="system" id="m7v-Qz-zij">
+                                        <connections>
+                                            <action selector="shareMeme:" destination="BYZ-38-t0r" id="Vjj-9g-sfG"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4ca-wi-ATc" userLabel="bottomToolbar">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
                                     <barButtonItem title="Select Image" image="photo" catalog="system" id="s0B-wa-s86">
@@ -28,7 +48,7 @@
                                             <action selector="takePhoto:" destination="BYZ-38-t0r" id="kC2-lJ-Z8n"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem title="Save" image="tray.and.arrow.down.fill" catalog="system" id="D6I-tJ-Mjk">
+                                    <barButtonItem title="Save" image="icloud.and.arrow.down.fill" catalog="system" width="236" id="D6I-tJ-Mjk">
                                         <connections>
                                             <action selector="saveMeme:" destination="BYZ-38-t0r" id="awR-sc-kdK"/>
                                         </connections>
@@ -38,23 +58,10 @@
                                             <action selector="editMeme:" destination="BYZ-38-t0r" id="PaF-z8-apn"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem enabled="NO" title="Previous" image="arrowshape.turn.up.left.fill" catalog="system" id="gzz-II-BsS">
-                                        <connections>
-                                            <action selector="previousMeme:" destination="BYZ-38-t0r" id="kES-8h-81N"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem enabled="NO" title="Next" image="arrowshape.turn.up.right.fill" catalog="system" id="qYc-t1-ar0">
-                                        <connections>
-                                            <action selector="nextMeme:" destination="BYZ-38-t0r" id="6oM-0F-yIg"/>
-                                        </connections>
-                                    </barButtonItem>
                                 </items>
                             </toolbar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WBq-sw-BNm">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
-                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1o9-66-Qhp">
-                                <rect key="frame" x="0.0" y="144" width="414" height="50"/>
+                                <rect key="frame" x="0.0" y="188" width="414" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="wor-fL-9yx"/>
                                 </constraints>
@@ -72,24 +79,29 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WBq-sw-BNm">
+                                <rect key="frame" x="0.0" y="86" width="414" height="725"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="4ca-wi-ATc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5Ld-Dp-2sZ"/>
-                            <constraint firstItem="WBq-sw-BNm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6sw-qW-J3B"/>
-                            <constraint firstItem="4ca-wi-ATc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Bl7-4t-kEp"/>
-                            <constraint firstItem="WBq-sw-BNm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JTm-CS-gYf"/>
-                            <constraint firstItem="4ca-wi-ATc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Lna-uH-BF5"/>
-                            <constraint firstItem="4ca-wi-ATc" firstAttribute="top" secondItem="WBq-sw-BNm" secondAttribute="bottom" id="PAz-EQ-FQd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WBq-sw-BNm" secondAttribute="trailing" id="a3h-9E-wPy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="1o9-66-Qhp" secondAttribute="trailing" id="cq3-1r-HLY"/>
-                            <constraint firstItem="WBq-sw-BNm" firstAttribute="bottom" secondItem="4ca-wi-ATc" secondAttribute="top" id="dqh-cT-vWT"/>
-                            <constraint firstItem="JS3-iG-OwB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fsf-WJ-uJ6"/>
-                            <constraint firstItem="1o9-66-Qhp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gqN-PT-7ke"/>
-                            <constraint firstItem="1o9-66-Qhp" firstAttribute="top" secondItem="WBq-sw-BNm" secondAttribute="top" constant="100" id="j3q-uE-DOy"/>
-                            <constraint firstItem="1o9-66-Qhp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="st9-Ts-Uan"/>
-                            <constraint firstItem="JS3-iG-OwB" firstAttribute="bottom" secondItem="WBq-sw-BNm" secondAttribute="bottom" constant="-100" id="tr6-Js-XzO"/>
-                            <constraint firstItem="JS3-iG-OwB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="w7C-1i-e5Q"/>
+                            <constraint firstItem="nDA-as-WoT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2Qu-0D-R0g"/>
+                            <constraint firstItem="WBq-sw-BNm" firstAttribute="bottom" secondItem="4ca-wi-ATc" secondAttribute="top" id="7FL-Mk-NJg"/>
+                            <constraint firstItem="1o9-66-Qhp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="BQp-x2-Kz6"/>
+                            <constraint firstItem="1o9-66-Qhp" firstAttribute="top" secondItem="WBq-sw-BNm" secondAttribute="top" constant="100" id="Dsh-Xw-bRr"/>
+                            <constraint firstItem="JS3-iG-OwB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FDW-yx-dAz"/>
+                            <constraint firstItem="nDA-as-WoT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KXk-Np-bdb"/>
+                            <constraint firstItem="JS3-iG-OwB" firstAttribute="bottom" secondItem="WBq-sw-BNm" secondAttribute="bottom" constant="-100" id="VhG-RX-KbS"/>
+                            <constraint firstItem="4ca-wi-ATc" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="aBm-my-jf7"/>
+                            <constraint firstItem="WBq-sw-BNm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bBq-s3-jpn"/>
+                            <constraint firstItem="WBq-sw-BNm" firstAttribute="top" secondItem="nDA-as-WoT" secondAttribute="bottom" id="boA-16-N89"/>
+                            <constraint firstItem="nDA-as-WoT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fI4-yn-1EY"/>
+                            <constraint firstItem="JS3-iG-OwB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hd5-cT-djS"/>
+                            <constraint firstItem="1o9-66-Qhp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kNv-Sq-o0D"/>
+                            <constraint firstItem="WBq-sw-BNm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pap-df-7cn"/>
+                            <constraint firstItem="4ca-wi-ATc" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="qDG-S7-ueR"/>
+                            <constraint firstItem="4ca-wi-ATc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vtx-FJ-EVj"/>
+                            <constraint firstItem="nDA-as-WoT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zy6-ae-dCC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -103,20 +115,22 @@
                         <outlet property="toolbarImage" destination="s0B-wa-s86" id="i8k-wc-eun"/>
                         <outlet property="toolbarPhoto" destination="SsT-rF-kFv" id="feN-Fd-zFt"/>
                         <outlet property="toolbarSave" destination="D6I-tJ-Mjk" id="cxU-Xe-CxC"/>
+                        <outlet property="toolbarShare" destination="m7v-Qz-zij" id="ok9-QA-1ql"/>
                         <outlet property="topTextField" destination="1o9-66-Qhp" id="u6J-k1-7e7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+            <point key="canvasLocation" x="-274" y="-78"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.left.fill" catalog="system" width="128" height="106"/>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <image name="camera" catalog="system" width="128" height="96"/>
+        <image name="icloud.and.arrow.down.fill" catalog="system" width="128" height="112"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="121"/>
         <image name="photo" catalog="system" width="128" height="93"/>
         <image name="square.and.pencil" catalog="system" width="128" height="118"/>
-        <image name="tray.and.arrow.down.fill" catalog="system" width="128" height="114"/>
     </resources>
 </document>
